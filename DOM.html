@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        margin: 10px;
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">Box1</div>
+      <div id="red" class="box">Box2</div>
+      <div class="box">Box3</div>
+      <div class="box">Box4</div>
+      <div class="box">Box5</div>
+    </div>
+
+    <script>
+      let div = document.createElement("div");
+      div.innerHTML = "I have been inserted <b>by Rajeev</b>";
+      div.setAttribute("class", "created");
+      document.querySelector(".container").before(div);
+
+      let cont = document.querySelector(".container");
+      cont.insertAdjacentHTML(
+        "afterend",
+        "<b> I am under the water.</b>"
+      );
+    </script>
+
+    <script src="DOM.js"></script>
+  </body>
+</html>
