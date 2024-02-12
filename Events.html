@@ -11,11 +11,14 @@
         <button id="btn">change content</button>
     </div>
 
-
     <script>
         let btn = document.getElementById("btn");
         btn.addEventListener("click", ()=> {
             document.querySelector(".box").innerHTML = "Content's been changed"
+        })
+        
+        document.addEventListener("keydown", (e)=> {
+            console.log(e.key, e.keyCode);
         })
     </script>
 </body>
